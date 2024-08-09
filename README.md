@@ -90,3 +90,89 @@ npx create-next-app@latest my-next-app
 ---
 
 For more details, visit the [Next.js Documentation](https://nextjs.org/docs).
+
+
+# Next.js Project Structure Overview
+
+## Top-Level Folders
+
+| Folder  | Description                                |
+|---------|--------------------------------------------|
+| `app`   | App Router for the new App Directory routing. |
+| `pages` | Pages Router for traditional file-based routing. |
+| `public`| Static assets served directly (e.g., images, fonts). |
+| `src`   | Optional source folder for application code. |
+
+## Top-Level Files
+
+| File                | Description                                                      |
+|---------------------|------------------------------------------------------------------|
+| `next.config.js`    | Configuration file for Next.js.                                 |
+| `package.json`      | Project dependencies and scripts.                                |
+| `instrumentation.ts`| OpenTelemetry and instrumentation file.                          |
+| `middleware.ts`     | Middleware for request handling.                                |
+| `.env`              | Environment variables.                                          |
+| `.env.local`        | Local environment variables.                                    |
+| `.env.production`   | Production environment variables.                                |
+| `.env.development`  | Development environment variables.                               |
+| `.eslintrc.json`    | Configuration file for ESLint.                                  |
+| `.gitignore`        | Specifies files and folders to ignore in Git.                    |
+| `next-env.d.ts`     | TypeScript declaration file for Next.js.                        |
+| `tsconfig.json`     | TypeScript configuration file.                                  |
+| `jsconfig.json`     | JavaScript configuration file.                                  |
+
+## App Router Conventions
+
+| File/Folder         | Description                                                 |
+|---------------------|-------------------------------------------------------------|
+| `layout`            | Defines a layout for pages.                                |
+| `page`              | Defines a page component.                                  |
+| `loading`           | Loading UI component.                                      |
+| `not-found`         | Not found UI component.                                    |
+| `error`             | Error UI component.                                        |
+| `global-error`      | Global error UI component.                                 |
+| `route`             | Defines an API endpoint.                                   |
+| `template`          | Re-rendered layout template.                               |
+| `default`           | Parallel route fallback page.                              |
+| `folder`            | Nested route segment.                                      |
+| `[folder]`          | Dynamic route segment.                                     |
+| `[...folder]`       | Catch-all route segment.                                   |
+| `[[...folder]]`     | Optional catch-all route segment.                          |
+| `(folder)`          | Groups routes without affecting routing.                   |
+| `_folder`           | Excludes folder and children from routing.                  |
+| `@folder`           | Named slot for parallel routes.                            |
+| `(.folder)`         | Intercept same level.                                      |
+| `(..folder)`        | Intercept one level above.                                 |
+| `(..)(..folder)`    | Intercept two levels above.                                |
+| `(...)folder`       | Intercept from root.                                       |
+
+## Metadata File Conventions
+
+| File                | Description                                                |
+|---------------------|------------------------------------------------------------|
+| `favicon.ico`       | Favicon file.                                              |
+| `icon`              | App icon file (various formats).                          |
+| `apple-icon`        | Apple app icon file (various formats).                    |
+| `opengraph-image`   | Open Graph image file (various formats).                  |
+| `twitter-image`     | Twitter image file (various formats).                     |
+| `sitemap.xml`       | Sitemap file for search engines.                          |
+| `robots.txt`        | Robots file for search engines.                           |
+
+## Pages Router Conventions
+
+| File/Folder         | Description                                                 |
+|---------------------|-------------------------------------------------------------|
+| `_app`              | Custom App component.                                      |
+| `_document`         | Custom Document component.                                 |
+| `_error`            | Custom Error Page.                                         |
+| `404`               | 404 Error Page.                                            |
+| `500`               | 500 Error Page.                                            |
+| `index`             | Home page or nested page.                                  |
+| `folder/index`      | Nested page in folder.                                    |
+| `[folder]/index`    | Dynamic route segment with nested page.                   |
+| `[...folder]/index` | Catch-all route segment with nested page.                 |
+| `[[...folder]]/index`| Optional catch-all route segment with nested page.        |
+| `[file]`            | Dynamic route segment file.                               |
+| `[...file]`         | Catch-all route segment file.                             |
+| `[[...file]]`       | Optional catch-all route segment file.                    |
+
