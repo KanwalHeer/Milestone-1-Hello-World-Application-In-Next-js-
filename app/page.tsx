@@ -15,7 +15,7 @@ export default function Home() {
 
       <div className="border-collapse bg-green-950 w-80 h-80 flex items-center mt-6 justify-center rounded-lg">
         <h1 className="text-center text-4xl font-extrabold text-white m-6 animate-bounce">
-          Hello World
+          Hello World!
         </h1>
       </div>
 
